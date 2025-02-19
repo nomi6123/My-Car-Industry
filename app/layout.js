@@ -29,7 +29,7 @@ export default function RootLayout({ children }) {
           strategy="afterInteractive"
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7225725941807740"
-          crossOrigin="anonymous"
+     crossorigin="anonymous"
         />
         
         <Header />
