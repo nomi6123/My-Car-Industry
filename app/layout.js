@@ -2,6 +2,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "./Components/Header/Header";
 import Footer from "./Components/Footer/Footer";
+import Script from "next/script";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -21,10 +22,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head>
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7225725941807740"
-          crossorigin="anonymous"></script>
-      </head>
+      <Script async src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${process.env.Public_Id}`}
+        crossOrigin="anonymous"></Script>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
